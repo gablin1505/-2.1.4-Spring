@@ -6,15 +6,21 @@ import org.springframework.stereotype.Component;
 // на дереве заяц , в зайце утка , в утке яйцо , в яйце иголка , смерть Кощея на игле :(
 
 
-
 //На свете есть океан , на океане остров , на острове дерево , на дереве заяц , в зайце утка
 
 /// На свете есть океан , на океане остров , на острове дерево , на дереве заяц , в зайце утка
 @Component
 public class Duck5 {
+    @Autowired
     private Egg6 egg6;
+
     @Autowired
     public Duck5(Egg6 egg6) {
+        this.egg6 = egg6;
+    }
+
+    @Autowired
+    public void setEgg6(Egg6 egg6) {
         this.egg6 = egg6;
     }
 
